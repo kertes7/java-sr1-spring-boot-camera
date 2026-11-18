@@ -1,0 +1,30 @@
+# Продовження сценарію після DELETE /saved/1 (виконано у Swagger UI)
+
+> GET /saved
+HTTP 200
+[{"id":2,"name":"Parking Camera","deviceType":"IP_CAMERA","status":"ONLINE","room":"Parking","floor":0},{"id":3,"name":"Warehouse Camera","deviceType":"IP_CAMERA","status":"OFFLINE","room":"Warehouse","floor":2},{"id":4,"name":"Office Camera","deviceType":"IP_CAMERA","status":"ONLINE","room":"Office 204","floor":2}]
+
+> GET /saved/2
+HTTP 200
+{"id":2,"name":"Parking Camera","deviceType":"IP_CAMERA","status":"ONLINE","room":"Parking","floor":0}
+
+> POST /import
+HTTP 200
+[{"id":1,"name":"Main Entrance","deviceType":"IP_CAMERA","status":"ONLINE","room":"Main Entrance","floor":1},{"id":2,"name":"Parking Camera","deviceType":"IP_CAMERA","status":"ONLINE","room":"Parking","floor":0},{"id":3,"name":"Warehouse Camera","deviceType":"IP_CAMERA","status":"OFFLINE","room":"Warehouse","floor":2},{"id":4,"name":"Office Camera","deviceType":"IP_CAMERA","status":"ONLINE","room":"Office 204","floor":2}]
+
+> GET /saved
+HTTP 200
+[{"id":1,"name":"Main Entrance","deviceType":"IP_CAMERA","status":"ONLINE","room":"Main Entrance","floor":1},{"id":2,"name":"Parking Camera","deviceType":"IP_CAMERA","status":"ONLINE","room":"Parking","floor":0},{"id":3,"name":"Warehouse Camera","deviceType":"IP_CAMERA","status":"OFFLINE","room":"Warehouse","floor":2},{"id":4,"name":"Office Camera","deviceType":"IP_CAMERA","status":"ONLINE","room":"Office 204","floor":2}]
+
+> GET /saved/1
+HTTP 200
+{"id":1,"name":"Main Entrance","deviceType":"IP_CAMERA","status":"ONLINE","room":"Main Entrance","floor":1}
+
+> DELETE /saved/99
+HTTP 404
+{"timestamp":"2026-11-18T15:49:17.299+00:00","status":404,"error":"Not Found","path":"/api/v1/camera/saved/99"}
+
+> POST /import (ще раз) і підрахунок записів
+HTTP 200
+> GET /saved → кількість записів і ID:
+4 записи, id = [1, 2, 3, 4]

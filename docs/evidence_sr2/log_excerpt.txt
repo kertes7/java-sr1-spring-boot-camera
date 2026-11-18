@@ -1,0 +1,40 @@
+17:47:27.666 [main] H2ConsoleAutoConfiguration : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:./data/cameradb'
+Hibernate: create table cameras (id bigint not null, device_type varchar(255), floor integer, name varchar(255), room varchar(255), status varchar(255), primary key (id))
+17:47:33.950 [main] com.example.demo.DemoApplication : Started DemoApplication in 13.655 seconds (process running for 14.903)
+17:48:02.531 [nio-8080-exec-2] CameraService : Importing cameras from external API
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: insert into cameras (device_type,floor,name,room,status,id) values (?,?,?,?,?,?)
+Hibernate: insert into cameras (device_type,floor,name,room,status,id) values (?,?,?,?,?,?)
+Hibernate: insert into cameras (device_type,floor,name,room,status,id) values (?,?,?,?,?,?)
+Hibernate: insert into cameras (device_type,floor,name,room,status,id) values (?,?,?,?,?,?)
+Hibernate: select count(*) from cameras ce1_0
+17:48:04.664 [nio-8080-exec-2] CameraService : Imported 4 cameras, total in database: 4
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+17:48:42.072 [nio-8080-exec-8] CameraService : Deleted camera 1
+Hibernate: delete from cameras where id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+17:49:16.208 [nio-8080-exec-3] CameraService : Importing cameras from external API
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: insert into cameras (device_type,floor,name,room,status,id) values (?,?,?,?,?,?)
+Hibernate: select count(*) from cameras ce1_0
+17:49:16.434 [nio-8080-exec-3] CameraService : Imported 4 cameras, total in database: 4
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+17:49:23.172 [nio-8080-exec-6] CameraService : Importing cameras from external API
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0 where ce1_0.id=?
+Hibernate: select count(*) from cameras ce1_0
+17:49:23.382 [nio-8080-exec-6] CameraService : Imported 4 cameras, total in database: 4
+Hibernate: select ce1_0.id,ce1_0.device_type,ce1_0.floor,ce1_0.name,ce1_0.room,ce1_0.status from cameras ce1_0

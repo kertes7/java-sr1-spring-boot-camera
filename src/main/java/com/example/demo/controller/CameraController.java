@@ -5,12 +5,16 @@ import com.example.demo.dto.SnapshotDto;
 import com.example.demo.service.CameraService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/** Наше REST API камери. Етап 1: обидва методи повертають DTO як JSON. */
+import java.util.Base64;
+
+/** Наше REST API камери: інформація як JSON, snapshot — як зображення JPEG. */
 @RestController
 @RequestMapping("/api/v1/camera")
 @RequiredArgsConstructor
@@ -24,8 +28,19 @@ public class CameraController {
         return cameraService.getCameraInfo();
     }
 
-    @PostMapping("/snapshot")
-    public SnapshotDto snapshot() {
-        return cameraService.captureSnapshot();
+    /**
+     * Фінальне завдання: той самий endpoint POST /snapshot, але відповідь — байти JPEG.
+     * Сервіс і клієнт, як і раніше, працюють з SnapshotDto; декодується лише поле image.
+     */
+    @PostMapping(
+            value = "/snapshot",
+            produces = MediaType.IMAGE_JPEG_VALUE
+    )
+    public ResponseEntity<byte[]> captureSnapshot() {
+        SnapshotDto snapshot = cameraService.captureSnapshot();
+        byte[] image = Base64.getDecoder().decode(snapshot.image());
+        return ResponseEntity.ok()
+                .contentType(MediaType.IMAGE_JPEG)
+                .body(image);
     }
 }

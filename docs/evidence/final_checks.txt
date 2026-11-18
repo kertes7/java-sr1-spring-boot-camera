@@ -1,0 +1,3 @@
+POST /api/v1/camera/snapshot з заголовком Accept: application/json (фінальна версія) -> HTTP 406 Not Acceptable
+POST /api/v1/camera/snapshot з заголовком Accept: image/jpeg -> HTTP 200, Content-Type: image/jpeg, 106972 байти
+Байти snapshot.jpg ідентичні результату Base64-декодування поля image з відповіді етапу 1 (SHA-256 ba6a02acbdac0f74...)

@@ -1,0 +1,8 @@
+2026-11-18T17:40:36.066+02:00  INFO 12472 --- [demo] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2026-11-18T17:40:36.126+02:00  INFO 12472 --- [demo] [           main] com.example.demo.DemoApplication         : Started DemoApplication in 7.447 seconds (process running for 8.549)
+2026-11-18T17:40:37.051+02:00  INFO 12472 --- [demo] [nio-8080-exec-1] com.example.demo.service.CameraService   : Capturing snapshot
+2026-11-18T17:40:38.062+02:00  INFO 12472 --- [demo] [nio-8080-exec-1] com.example.demo.service.CameraService   : Snapshot received
+2026-11-18T17:41:01.665+02:00  INFO 12472 --- [demo] [nio-8080-exec-5] com.example.demo.service.CameraService   : Capturing snapshot
+2026-11-18T17:41:02.335+02:00  INFO 12472 --- [demo] [nio-8080-exec-5] com.example.demo.service.CameraService   : Snapshot received
+2026-11-18T17:41:39.836+02:00  INFO 12472 --- [demo] [nio-8080-exec-8] com.example.demo.service.CameraService   : Capturing snapshot
+2026-11-18T17:41:40.148+02:00  INFO 12472 --- [demo] [nio-8080-exec-8] com.example.demo.service.CameraService   : Snapshot received

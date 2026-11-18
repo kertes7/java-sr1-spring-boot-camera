@@ -51,6 +51,17 @@
             <optional>true</optional>
         </dependency>
 
+        <!-- СР2: Spring Data JPA (Hibernate) + вбудована база H2 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+
         <!-- Feign (HTTP client for external APIs) -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
